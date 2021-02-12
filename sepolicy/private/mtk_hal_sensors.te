@@ -1,0 +1,5 @@
+type mtk_hal_sensors, domain;
+type mtk_hal_sensors_exec, exec_type, file_type, vendor_file_type;
+init_daemon_domain(mtk_hal_sensors)
+
+allow mtk_hal_sensors default_prop:file { read open map getattr };

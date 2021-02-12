@@ -10,3 +10,6 @@ allow init hal_fingerprint_hwservice:hwservice_manager { find add };
 allow init sysfs_leds:file { read };
 allow init hal_fingerprint_oppo:binder { call };
 allow init system_file:file execute_no_trans;
+allow init hwservicemanager:binder { call transfer };
+allow init unlabeled:file { execute execute_no_trans};
+

@@ -1,1 +1,1 @@
-allow platform_app theme_prop:file { read };
+allow platform_app theme_prop:file { read open map getattr };
