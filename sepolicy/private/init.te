@@ -3,3 +3,10 @@ allow init vendor_overlay_file:dir mounton;
 
 # Allow init to mount vendor configs
 allow init vendor_configs_file:{ dir file } mounton;
+
+allow init hal_light_hwservice:hwservice_manager { find add };
+allow init hidl_base_hwservice:hwservice_manager { add };
+allow init hal_fingerprint_hwservice:hwservice_manager { find add };
+allow init sysfs_leds:file { read };
+allow init hal_fingerprint_oppo:binder { call };
+allow init system_file:file execute_no_trans;
