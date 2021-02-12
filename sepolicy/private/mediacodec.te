@@ -1,0 +1,5 @@
+define(`system_only', ifelse(target_recovery, `true', , $1))
+system_only(`
+  type mediacodec, domain;
+  allow mediacodec default_prop:file { read open map getattr };
+');
